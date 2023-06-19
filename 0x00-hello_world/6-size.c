@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
- * Main - print size of varialbles
+ * main - print size of varialbles
+ *
+ * Description: getting size of the data type in c,
  * int, long int, long long int, char, float
- * Return : 0 if it's successful
- * it return zero
- * Description: getting size of the data type in c
+ *
+ * Return : Always return 0 (success)
  */
 int main(void)
 {
@@ -14,10 +15,10 @@ int main(void)
 	long int li;
 	long long int lli;
 	
-	printf(" the size of an int is : %lu .\n", (unsigned long)sizeof(i));
-	printf(" the size of an long int is : %lu .\n", (unsigned long)sizeof(li));
-	printf(" the size of an char is : %lu .\n", (unsigned long)sizeof(c));
-	printf(" the size of an float is : %lu .\n", (unsigned long)sizeof(f));
-	printf(" the size of an long long int is : %lu .\n", (unsigned long)sizeof(lli));
+	printf(" Size of an int is : %lu byte(s)\n", (unsigned long)sizeof(i));
+	printf(" Size of a long int is : %lu byte(s)\n", (unsigned long)sizeof(li));
+	printf(" Size of a char is : %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf(" Size of a float is : %lu byte(s)\n", (unsigned long)sizeof(f));
+	printf(" Size of a long long int is : %lu byte(s)\n", (unsigned long)sizeof(lli));
 	return (0);
 }
