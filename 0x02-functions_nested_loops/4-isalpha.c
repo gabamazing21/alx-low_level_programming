@@ -20,15 +20,14 @@ int _isalpha(int c)
 		}
 	}
 	for (a = 'a' ; a <= 'z' ; a++)
-        {
-                if (c == a)
-                {
-                        result2 = 1;
-                        break;
-                }
-        }
-	if( result1 == 1 || result2 == 1)
+	{
+		if (c == a)
+		{
+			result2 = 1;
+			break;
+		}
+	}
+	if (result1 == 1 || result2 == 1)
 		final_result = 1;
-	
 	return (final_result);
 }
