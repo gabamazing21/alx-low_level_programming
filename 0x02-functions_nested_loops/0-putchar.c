@@ -1,14 +1,4 @@
-#include <unistd.h>
-/**
- * _putchar - writes the character c to stdouti
- * Return: On success 1.
- * @c: The character to print
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char c);
 /**
  * main - write output putchar
  * Return: always 0 (success)
