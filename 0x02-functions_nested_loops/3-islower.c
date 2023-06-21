@@ -1,22 +1,21 @@
 #include "main.h"
 /**
- * int _islower - check if char islower
- * @c - input parameter
- * Return: return result
+ * _islower - check if char islower
+ * @c: character to check islower
+ * Return: always result
  */
 int _islower(int c)
 {
-	char a ;
-	int result;
+	char a;
+	int result = 0;
+
 	for (a = 'a' ; a <= 'z' ; a++)
 	{
-		if ( c == a)
+		if (ic == a)
 		{
 			result = 1;
 			break;
-		}else{
-			result = 0;
 		}
 	}
-	return result;
+	return (result);
 }
