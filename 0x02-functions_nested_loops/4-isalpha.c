@@ -7,15 +7,28 @@
 int _isalpha(int c)
 {
 	char a;
-	int result = 0;
+	int result1 = 0;
+	int result2 = 0;
+	int final_result = 0;
 
 	for (a = 'A' ; a <= 'Z' ; a++)
 	{
 		if (c == a)
 		{
-			result = 1;
+			result1 = 1;
 			break;
 		}
 	}
-	return (result);
+	for (a = 'a' ; a <= 'z' ; a++)
+        {
+                if (c == a)
+                {
+                        result2 = 1;
+                        break;
+                }
+        }
+	if( result1 == 1 || result2 == 1)
+		final_result = 1;
+	
+	return (final_result);
 }
