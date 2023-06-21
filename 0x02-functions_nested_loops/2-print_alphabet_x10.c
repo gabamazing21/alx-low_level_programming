@@ -1,19 +1,23 @@
 #include "main.h"
 
 /**
- * main - printing small alphabet letter a-z 10 time
+ * print_alphabet_x10 - printing small alphabet letter a-z 10 time
  * using _putchar
  * Return: always 0
  */
 
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 	char a;
+	int i = 0;
 
-	
-	for (a = 'a' ; a <= 'z' ; a++)
+	while (i < 10)
 	{
-		_putchar(a);
+		for (a = 'a' ; a <= 'z' ; a++)
+		{
+			_putchar(a);
+		}
+		_putchar('\n');
+		i++;
 	}
-	_putchar('\n');
 }
