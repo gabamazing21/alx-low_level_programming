@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * main - printing small alphabet letter
