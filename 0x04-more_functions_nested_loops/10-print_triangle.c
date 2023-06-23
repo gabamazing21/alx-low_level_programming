@@ -12,17 +12,20 @@ void print_triangle(int size)
 		_putchar('\n');
 		return;
 	}
-	for (row = 0; row < size; row++)
+	else
 	{
-		for (spaces = 0; spaces < size - row; spaces++)
+		for (row = 0; row < size + 1; row++)
 		{
-			_putchar(' ');
+			for (spaces = 0; spaces < size-row; spaces++)
+			{	
+				_putchar(' ');
+			}
+			for (hashes = 0; hashes < row ; hashes++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-		for (hashes = 0; hashes < row; hashes++)
-		{
-			_putchar('#');
-		}
-		_putchar('\n');
 	}
 }
 
