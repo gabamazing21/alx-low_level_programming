@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * main - print FizzBuszz
  */
@@ -10,23 +11,17 @@ int main(void)
 	{
 		if (n % 3 == 0)
 		{
-			_putchar ('F');
-			_putchar ('i');
-			_putchar ('z');
-			_putchar ('z');
+			printf("Fizz");
 		}
 		else if (n % 5 == 0)
 		{
-			_putchar ('B');
-			_putchar ('u');
-			_putchar ('z');
-			_putchar ('z');
+			printf("Buzz");
 		}
 		else
 		{
-			print_number(n);
+			printf("%d", n);
 		}
-		_putchar (' ');
+		printf(" ");
 	}
 	return (0);
 }
