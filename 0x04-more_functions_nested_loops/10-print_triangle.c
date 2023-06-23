@@ -14,13 +14,13 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (row = 0; row < size + 1; row++)
+		for (row = 0; row < size; row++)
 		{
-			for (spaces = 0; spaces < size - row; spaces++)
+			for (spaces = 0; spaces < size - row - 1; spaces++)
 			{
 				_putchar(' ');
 			}
-			for (hashes = 0; hashes < row ; hashes++)
+			for (hashes = 0; hashes < row +1; hashes++)
 			{
 				_putchar('#');
 			}
