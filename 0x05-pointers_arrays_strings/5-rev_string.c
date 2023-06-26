@@ -5,15 +5,21 @@
  */
 void rev_string(char *s)
 {
-	int i;
-	int length = _strlen(s);
-	char rev_string [10];
+	int start = 0;
+	int end = _strlen(s) - 1;
+	char temp;
 
-	for (i = length - 1; i >= 0; i--)
+	while (start < end)
 	{
-		rev_string[i] = s[i];
+		temp = s[start];
+		s[start] = s[end];
+		s[end] = temp;
+
+		start++;
+		end--;
 	}
-	s = rev_string;
+
+
 }
 /**
   * _strlen - get length of string
