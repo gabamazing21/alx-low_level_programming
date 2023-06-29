@@ -1,7 +1,7 @@
 #include "main.h"
 int _strlen(char *s);
 /**
-  * _strcat - it merge two string together
+  * _strncat - it merge two string together
   * @src: source
   * @dest: destination
   * @n: at most byte
