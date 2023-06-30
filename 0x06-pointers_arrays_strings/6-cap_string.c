@@ -6,9 +6,11 @@
   */
 char *cap_string(char *a)
 {
-	int j;
+	int j = 0;
 
-	for (j = 0; a[j] != '\0'; j++)
+	if (a[j] >= 'a' && a[j] <= 'z')
+		a[j] = a[j] - 32;
+	for (; a[j] != '\0'; j++)
 	{
 		if (a[j] == ',' || a[j] == ';' || a[j] == '.' ||
 				a[j] == '!' || a[j] == '?'
