@@ -20,6 +20,8 @@ char *_strstr(char *haystack, char *needle)
 			{
 				return (&haystack[i]);
 			}
+			if(haystack[i + j] == '\0')
+				return (0);
 	}
 	return (0);
 }
