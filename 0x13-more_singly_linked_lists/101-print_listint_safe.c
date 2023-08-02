@@ -1,9 +1,4 @@
 #include "lists.h"
-/**
-  * print_listint_safe - print listint_t linkedlist
-  * @head: pointer to head node
-  * Return: number of nodes in a list
-  */
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
@@ -15,7 +10,6 @@ size_t print_listint_safe(const listint_t *head)
 		hare = hare->next->next;
 		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
 		count++;
-
 		if (tortoise == hare)
 		{
 			printf("-> [%p] %d\n", (void *)tortoise, tortoise->n);
