@@ -4,27 +4,22 @@
   * @h: pointer to head node
   * Return: number of nodes in a list
   */
-size_t print_listint_safe(const listint_t *h)
+size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
-	const listint_t *current = h;
-	const listint_t *visited[1000];
+	const listint_t *tortoise = head, *hare = head;
 
-	while (current != NULL)
+	while (tortoise != NULL && hare != NULL && hare->next != NULL)
 	{
-		size_t i;
-
-		for (i = 0; i < count; i++)
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
+		count++;
+		if (tortoise == hare)
 		{
-			if (current == visited[i])
-			{
-				printf("[%p] %d\n", (void *)current, current->n);
-				exit(98);
-			}
+			printf("[%p] %d\n", (void *)tortoise, tortoise->n);
+			exit(98);
 		}
-		printf("[%p] %d\n", (void *)current, current->n);
-		visited[count++] = current;
-		current = current->next;
 	}
 	return (count);
 }
