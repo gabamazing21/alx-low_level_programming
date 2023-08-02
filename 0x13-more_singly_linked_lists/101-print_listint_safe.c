@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
   * print_listint_safe - print listint_t linkedlist
-  * @h: pointer to head node
+  * @head: pointer to head node
   * Return: number of nodes in a list
   */
 size_t print_listint_safe(const listint_t *head)
@@ -13,13 +13,13 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		tortoise = tortoise->next;
 		hare = hare->next->next;
-		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
-		count++;
 		if (tortoise == hare)
 		{
 			printf("[%p] %d\n", (void *)tortoise, tortoise->n);
 			exit(98);
 		}
+		printf("[%p] %d\n", (void *)tortoise, tortoise->n);
+		count++;
 	}
 	return (count);
 }
