@@ -2,4 +2,5 @@
 #define MAIN_H
 #include <stdlib.h>
 #include <stdio.h>
+int _atoi(char *s);
 #endif
