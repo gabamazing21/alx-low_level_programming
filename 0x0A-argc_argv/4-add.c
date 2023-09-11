@@ -19,12 +19,14 @@ int main(int argc, char **argv)
 	{
 		for (i = 0; i < argc ; i++)
 		{
-			if (_atoi(argv[i]) > 0)
-				sum += _atoi(argv[i]);
-			else
+			if ((_isdigit((_atoi(argv[i])))))
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
+			}
+			else
+			{
+				sum += _atoi(argv[i]);
 			}
 		}
 		printf("%d\n", sum);
@@ -55,4 +57,24 @@ int _atoi(char *s)
 			break;
 	}
 	return (num);
+}
+
+/**
+ * _isdigit - check if it's digit
+ * @c: character to check it's digit
+ * Return: return result
+ */
+int _isdigit(int c)
+{
+	int result = 0;
+	char n;
+
+	for (n = '0'; n <= '9'; n++)
+	{
+		if (c == n)
+		{
+			result = 1;
+		}
+	}
+	return (result);
 }
