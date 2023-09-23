@@ -21,7 +21,8 @@ void times_table(void)
 			{
 				if (j != 0) /* Don't print leading space for first column */
 				{
-					_putchar(' '); /* Print a space before single digit numbers, except for the first column */
+					_putchar(' '); /* Print a space before single digit */
+							  /*numbers, except for the first column */
 				}
 				_putchar('0' + multiples);
 			}
@@ -29,4 +30,9 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
+			}
+		}
+		_putchar('\n');
+	}
+}
 
