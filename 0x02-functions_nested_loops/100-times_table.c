@@ -17,24 +17,42 @@ void print_times_table(int n)
 
 			if (multiples >= 10)
 			{
-				_putchar('0' + multiples / 10);
-				_putchar('0' + multiples % 10);
+				print_long(multiples);
 			}
 			else
 			{
 				if (j != 0) /* Don't print leading space for first column */
 				{
-					_putchar(' '); /* Print a space before single digit */
-							  /*numbers, except for the first column */
+					_putchar(' ');
 				}
 				_putchar('0' + multiples);
 			}
-			if (j != 9) /* Don't print comma and space after the last column */
+			if (j != n) /* Don't print comma and space after the last column */
 			{
-				_putchar(',');
-				_putchar(' ');
+				if (multiples < 100)
+				{	_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 		}
 		_putchar('\n');
+	}
+}
+/**
+ * print_long - print int using char
+ * @value: int valaue
+ */
+void print_long(int value)
+{
+	if (value != 0)
+	{
+		print_long(value / 10);
+		putchar((value % 10) + '0');
 	}
 }
