@@ -9,14 +9,14 @@ int main(void)
 	double i, t1 = 1, t2 = 2;
 	double nextTerm = t1 + t2;
 
-	printf("%0.f, %0.f, ", t1, t2);
+	printf("%.0f, %.0f, ", t1, t2);
 
 	for (i = 3; i <= 98; ++i)
 	{
 		if (nextTerm >= 10)
-			printf("%0.f", nextTerm);
+			printf("%.0f", nextTerm);
 		else
-			printf("%0.f", nextTerm);
+			printf("%.0f", nextTerm);
 		if (i != 98)
 		{
 			putchar(',');
