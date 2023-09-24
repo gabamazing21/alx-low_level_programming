@@ -13,10 +13,7 @@ int main(void)
 
 	for (i = 3; i <= 98; ++i)
 	{
-		if (nextTerm >= 10)
-			printf("%.0f", nextTerm);
-		else
-			printf("%.0f", nextTerm);
+		printf("%.0f", nextTerm);
 		if (i != 98)
 		{
 			putchar(',');

@@ -59,5 +59,6 @@ int main(void)
 
 	u = 10;
 	crackme(u);
+	putchar('\n');
 	return (0);
 }
