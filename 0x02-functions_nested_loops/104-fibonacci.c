@@ -6,8 +6,8 @@ void print_long(double value);
  */
 int main(void)
 {
-	double i, t1 = 1, t2 = 2;
-	double nextTerm = t1 + t2;
+	float i, t1 = 1, t2 = 2;
+	float nextTerm = t1 + t2;
 
 	printf("%.0f, %.0f, ", t1, t2);
 
