@@ -10,26 +10,7 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	if (n >= 10)
-		print_long(n);
-	else if ((n > 0) && (n < 10))
-	{
-		_putchar('0' + n);
-	}
-	else if (n == 0)
-	{
-		_putchar('0');
-	}
-}
-/**
- * print_long - print int with putchar
- * @value: int
- */
-void print_long(int value)
-{
-	if (value != 0)
-	{
-		print_long(value / 10);
-		_putchar((value % 10) + '0');
-	}
+	if (n / 10)
+		print_number(n / 10);
+	_putchar(n % 10 + '0');
 }
