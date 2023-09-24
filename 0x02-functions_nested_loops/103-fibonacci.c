@@ -8,6 +8,7 @@ int main(void)
 	long int i, t1 = 1, t2 = 2;
 	long int sum = t2;
 	long int nextTerm = t1 + t2;
+
 	for (i = 3; nextTerm <= 4000000; ++i)
 	{
 		if (nextTerm % 2 == 0)
@@ -18,6 +19,6 @@ int main(void)
 		t2 = nextTerm;
 		nextTerm = t1 + t2;
 	}
-	printf("%ld \n",sum);
+	printf("%ld\n", sum);
 	return (0);
 }
