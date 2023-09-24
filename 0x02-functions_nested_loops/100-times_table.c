@@ -53,6 +53,6 @@ void print_long(int value)
 	if (value != 0)
 	{
 		print_long(value / 10);
-		putchar((value % 10) + '0');
+		_putchar((value % 10) + '0');
 	}
 }
