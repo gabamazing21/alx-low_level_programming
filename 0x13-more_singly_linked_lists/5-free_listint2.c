@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_listint - free listint and set head to null
+ * free_listint2 - free listint and set head to null
  * @head: head node
  */
 void free_listint2(listint_t **head)
@@ -9,7 +9,7 @@ void free_listint2(listint_t **head)
 	listint_t *next;
 
 	tmp = *head;
-	while ( tmp != NULL)
+	while (tmp != NULL)
 	{
 		next = tmp->next;
 		free(tmp);
