@@ -8,25 +8,27 @@
 
 int main(int argc, char **argv)
 {
-	int i, sum = 0;
+	int i, sum = 0, num, is_digit;
 
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("0\n");
 		return (0);
 	}
 	else
 	{
-		for (i = 0; i < argc ; i++)
+		for (i = 1; i <= argc ; i++)
 		{
-			if ((_isdigit((_atoi(argv[i])))))
+			num = _atoi(argv[i]);
+			is_digit = _isdigit(num);
+			if (is_digit == 1)
 			{
-				printf("Error\n");
-				return (1);
+				sum = sum + num;
 			}
 			else
 			{
-				sum += _atoi(argv[i]);
+				printf("Error\n");
+				return (1);
 			}
 		}
 		printf("%d\n", sum);
