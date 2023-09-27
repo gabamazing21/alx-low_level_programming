@@ -8,21 +8,29 @@ int _strlen(char *s);
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len, i, j;
+	int len, i = 0, j = 0;
 	char *s;
 
-	len = _strlen(s1) + _strlen(s2) + 10;
-	s = malloc(sizeof(char) * len);
-	if (s == NULL)
-		return (NULL);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (i = 0; s1[i] != '\0'; i++)
-		s[i] = s1[i];
-	for (j = 0; s2[j] != '\0'; j++, i++)
-		s[i] = s2[j];
+	if ((s1 == NULL) && (s2 == NULL))
+	{
+		s = malloc(sizeof(char));
+		s = "";
+		return (s);
+	}
+	len = _strlen(s1) + _strlen(s2) + 1;
+	s = malloc(sizeof(char) * len);
+
+	if (s != NULL)
+	{
+		for (i = 0; s1[i] != '\0'; i++)
+			s[i] = s1[i];
+		for (j = 0; s2[j] != '\0'; j++, i++)
+			s[i] = s2[j];
+	}
 	s[i] = '\0';
 	return (s);
 }
