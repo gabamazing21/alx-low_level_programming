@@ -7,9 +7,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, rd;
+	int fd, rd, wr;
 	char *ch;
-	size_t n = 0;
 
 	if (filename == NULL)
 		return (0);
@@ -30,13 +29,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	for (n = 0; ch[n] != '\0'; n++)
+	wr = write(STDOUT_FILENO,ch, rd);
+	if (wr == -1 || wr != rd)
 	{
-		_putchar(ch[n]);
-
+		free(ch);
+		close(fd);
+		return (0);
 	}
+	close(fd);
 	free(ch);
-	return (n);
+	return (wr);
 }
 
 /**
