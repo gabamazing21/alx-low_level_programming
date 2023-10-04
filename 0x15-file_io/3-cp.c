@@ -4,7 +4,6 @@
 #include <errno.h>
 #include <unistd.h>
 #include <fcntl.h>
-int _putchar(char c);
 /**
  * main - copy content in file to file 2
  * @argc: arg count
@@ -54,14 +53,3 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
