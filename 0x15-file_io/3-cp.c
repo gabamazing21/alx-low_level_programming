@@ -36,8 +36,18 @@ int main(int argc, char *argv[])
 	}
 	if (byte_read == -1)
 	{
-		fprintf(stderr, "Error reading from source file");
+		fprintf(stderr, "can't write to %s", argv[2]);
 		exit(1);
+	}
+	if (close(fdto) == -1)
+	{
+		fprintf(stderr, "can't close %d", fdto);
+		exit(100);
+	}
+	if (close(fdfrom) == -1)
+	{
+		fprintf(stderr, "can't close %d", fdfrom);
+		exit(100);
 	}
 	close(fdto);
 	close(fdfrom);
