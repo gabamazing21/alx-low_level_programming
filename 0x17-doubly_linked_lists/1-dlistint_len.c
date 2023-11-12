@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * dlistint_len - return number of element:
  * @h: head node
